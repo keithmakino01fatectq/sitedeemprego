@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>Site de Emprego </title>
+</head>
+
+<body>
+    <!-- Cabeçalho e suas opções -->
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#"><img src="img/logo2.png" alt="logo do site"></a>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#destaque">Destaque</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recente">Recentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vagas">Vagas</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-3 my-lg-0">
+                    <button type="button" class="btn btn-secondary my-2 my-sm-0" data-toggle="modal" data-target="#registrar"
+                        data-whatever="@mdo">Registrar</button>
+                    &nbsp;
+                    <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#entrar"
+                        data-whatever="@mdo">Entrar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <!-- Modal de Entrar-->
+    <div class="modal fade" id="entrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Entrar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="nome@algo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Senha</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="senha">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Sempre entrar com essa conta</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Registro de currículos -->
+    <div class="modal fade" id="registrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registrar Currículo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="firstName">Primeiro nome</label>
+                                <input type="text" class="form-control" placeholder="Primeiro nome">
+                            </div>
+                            <div class="col">
+                                <label for="lastName">Sobrenome</label>
+                                <input type="text" class="form-control" placeholder="Sobrenome">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="nome@algo.com">
+                                <small id="emailHelp" class="form-text text-muted">Não iremos compartilhar seu
+                                    e-mail
+                                    com mais ninguém.</small>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Senha</label>
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Confirmar senha</label>
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="phone">Telefone</label>
+                                <input type="number" class="form-control" id="phone" placeholder="(xx) 9xxxx-xxxx">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="cpf">CPF</label>
+                                <input type="number" class="form-control" id="cpf" placeholder="xxx-xxx-xxx-xx">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">Endereço</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Rua das ruas">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">Cidade</label>
+                                <input type="text" class="form-control" id="inputCity" placeholder="Catanduva">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputState">Estado</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>São paulo</option>
+                                    <option>Bahia</option>
+                                    <option>Distrito Federal</option>
+                                    <option>Goiás</option>
+                                    <option>Minas Gerais</option>
+                                    <option>Pará</option>
+                                    <option>Paraná</option>
+                                    <option>Pernambuco</option>
+                                    <option>Rio Grande do Norte</option>
+                                    <option>Outro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="phone">Cargo desejado</label>
+                                <input type="number" class="form-control" id="phone" placeholder="exemplo: balconista">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputState">Pretenção salarial</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Até R$1.000,00</option>
+                                    <option>A partir de R$2.000,00</option>
+                                    <option>A partir de R$4.000,00</option>
+                                    <option>A partir de R$5.000,00</option>
+                                    <option>A partir de R$6.000,00</option>
+                                    <option>A partir de R$7.000,00</option>
+                                    <option>A partir de R$8.000,00</option>
+                                    <option>A partir de R$9.000,00</option>
+                                    <option>A partir de R$10.000,00</option>
+                                    <option>A partir de R$15.000,00</option>
+                                    <option>Acima de R$20.000,00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h6>Está empregado no momento?</h6>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline1">Sim
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline2">Não</label>
+                                </div>
+                            </div>
+                        </div>
+                        <h6>Possui alguma deficiência?</h6>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline3" name="customRadioInline2" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline3">Sim
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline4" name="customRadioInline2" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline4">Não</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Parte inicial  do site, para pesquisar por vagas, Currículo ou empresa -->
+    <div class="jumbotron fundoinicial">
+        <div class="container">
+            <div class="jumbotron caixainicial text-center">
+                <h1 class="display-4">Encontre a sua vaga ideal!</h1>
+                <p class="lead">Temos mais de 120 mil oportunidades para você.</p>
+                <div class="input-group mb-4">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-dark dropdown-toggle select" type="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"><i class="fas fa-suitcase"></i></button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#"><i class="fas fa-suitcase"></i> &nbsp; Vagas</a>
+                            <div role="separator" class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fas fa-file-alt"></i> &nbsp; Currículo</a>
+                            <div role="separator" class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fas fa-building"></i> &nbsp; Empresas</a>
+                        </div>
+                    </div>
+                    <input type="text" aria-label="First name" class="form-control" placeholder="Digite um cargo ou palavra chave">
+                    <input type="text" aria-label="Last name" class="form-control" placeholder="Digite uma cidade">
+                    <div class="input-group-append">
+                        <button class="btn btn-dark" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Parte especial -->
+    <div class="container">
+        <div class="row text-center especial">
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-success btn-lg">Programas de estágio</button>
+            </div>
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-success btn-lg">Vagas para pessoas com deficiência</button>
+            </div>
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-success btn-lg">Empregos temporários</button>
+            </div>
+        </div>
+        <div id="recente"></div>    
+    </div>
+    <!-- Vagas recentes estarão aqui, todas elas não são simulação -->
+    <div class="jumbotron jumbotron-fluid fundovagasrecentes">
+        <div class="container text-center">
+            <h1 class="display-4">Vagas de emprego recentes</h1>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Vagas executivas</h3>
+                    <div class="card border-success">
+                        <div class="card-body">
+                            <h5 class="card-title">Gerente financeiro</h5>
+                            <p class="card-text">MAXIMIZARH <br>Período Integral. Efetivo – CLT <br>Rio de Janeiro, RJ
+                                <br>(22 vagas abertas)</p>
+                            <a href="#" class="btn btn-primary">Descrição</a>
+                        </div>
+                    </div>
+                    <div class="card border-success">
+                        <div class="card-body">
+                            <h5 class="card-title">Gerente comercial</h5>
+                            <p class="card-text">Nutricare<br> Período Integral. Prestador de Serviços<br>São Paulo, SP<br>(50
+                                vagas abertas)</p>
+                            <a href="#" class="btn btn-primary">Descrição</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Vagas Proficionais</h3>
+                    <div class="card border-secondary">
+                        <div class="card-body">
+                            <h5 class="card-title">Líder de equipe de venda</h5>
+                            <p class="card-text">PREMIUM Rh<br>Período Integral. Efetivo – CLT
+                                <br>Porto Alegre, RS<br>(7 vagas abertas)</p>
+                            <a href="#" class="btn btn-primary">Descrição</a>
+                        </div>
+                    </div>
+                    <div class="card border-secondary">
+                        <div class="card-body">
+                            <h5 class="card-title">Vendedor técnico</h5>
+                            <p class="card-text">PISCINA E LAZER<br>Período Integral. Efetivo – CLT<br>Rio de Janeiro,
+                                RJ<br>(4 vagas abertas)</p>
+                            <a href="#" class="btn btn-primary">Descrição</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Vagas de TI</h3>
+                    <div class="card border-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Analista De Mis</h5>
+                            <p class="card-text">DESEMPENHO RECURSOS HUMANOS<br>Período Integral. Efetivo – CLT<br>São
+                                Paulo, SP<br>(29 vagas abertas)</p>
+                            <a href="#" class="btn btn-primary">Descrição</a>
+                        </div>
+                    </div>
+                    <div class="card border-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Analista de Infraestrutura</h5>
+                            <p class="card-text">PREMIUM Rh<br>Período Integral. Efetivo – CLT<br>Porto Alegre, RS<br>(25
+                                vagas abertas)</p>
+                            <a href="#" class="btn btn-primary">Descrição</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row space">
+                <div class="col-sm-12">
+                    <button type="button" class="btn btn-primary btn-lg">Mais</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conquiste um novo emprego; motivação para usuários -->
+    <div class="container conquiste">
+        <div class="row text-center">
+            <div class="col-sm-12">
+                <h1>Conquiste um novo emprego</h1>
+
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm-3">
+                <img src="img/curriculo.png" alt="..." class="rounded-circle">
+                <span>Anuncie seu currículo</span>
+            </div>
+            <div class="col-sm-3">
+                <img src="img/curriculoenv.png" alt="..." class="rounded-circle">
+                <span>Candidate-se a vagas</span>
+            </div>
+            <div class="col-sm-3">
+                <img src="img/CV.png" alt="..." class="rounded-circle">
+                <span>Saiba quem viu seu currículo</span>
+            </div>
+            <div class="col-sm-3">
+                <img src="img/processo.png" alt="..." class="rounded-circle">
+                <span>Acompanhe processos seletivos</span>
+            </div>
+        </div>
+        <div id="destaque"></div>
+    </div>
+
+    <!-- Destaque da semana -->
+    <div class="jumbotron jumbotron-fluid fundodestaque">
+        <div class="container destaquesemana text-center">
+            <h3><i class="fas fa-suitcase"></i> &nbsp; Destaque da semana</h3>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="img/lideresentrevista.jpg" alt="">
+                    <p>O que grandes líderes e executivos perguntam em entrevistas de emprego</p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="img/10-dicas-carta-de-apresentação-destaque.jpg" alt="">
+                    <p>10 dicas para fazer uma carta de apresentação</p>
+                </div>
+                <div class="col-sm-4">
+                    <img src="img/curriculoelaboração.jpg" alt="">
+                    <p>Preencha seu currículo da maneira correta e tenha mais destaque</p>
+                </div>
+            </div>
+            <hr>
+            <button type="button" class="btn btn-primary btn-lg">
+                Mais sobre o mercado
+            </button>
+        </div>
+        <div id="vagas"></div>
+    </div>
+
+
+    <!-- Vagas por área -->
+    <div class="container text-center vagas">
+        <h2>Vagas por área</h2>
+        <h5>Veja abaixo os cargos com mais vagas disponíveis.</h5>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3><i class="fas fa-folder-minus"></i> &nbsp; Administrativo</h3>
+                    <hr>
+                    <h5>Vendedor</h5>
+                    <p>(12.173 vagas abertas)</p>
+                    <br>
+                    <h5>Estagiário</h5>
+                    <p>(6.706 vagas abertas)</p>
+                    <br>
+                    <h5>Representante Comercial</h5>
+                    <p>(2.629 vagas abertas)</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3><i class="fas fa-shopping-cart"></i> &nbsp; Comércio</h3>
+                    <hr>
+                    <h5>Atendente</h5>
+                    <p>(3.980 vagas abertas)</p>
+                    <br>
+                    <h5>Caixa</h5>
+                    <p>(1.828 vagas abertas)</p>
+                    <br>
+                    <h5>Ajudante de cozinha</h5>
+                    <p>(808 vagas abertas)</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3><i class="fas fa-headset"></i> &nbsp; Telemarketing</h3>
+                    <hr>
+                    <h5>Operador de telemarketing</h5>
+                    <p>(4.190 vagas abertas)</p>
+                    <br>
+                    <h5>Atendente de telemarketing</h5>
+                    <p>(1.478 vagas abertas)</p>
+                    <br>
+                    <h5>Gerente de atendimento</h5>
+                    <p>(62 vagas abertas)</p>
+                </div>
+            </div>
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
+                Mostrar mais vagas
+            </a>
+            <div class="colalpse">
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <h3><i class="fas fa-laptop"></i> &nbsp; Informática e Telecom.</h3>
+                                    <hr>
+                                    <h5>Programador</h5>
+                                    <p>(7.731 vagas abertas)</p>
+                                    <br>
+                                    <h5>Analista de desenvolvimento de sistemas</h5>
+                                    <p>(1.628 vagas abertas)</p>
+                                    <br>
+                                    <h5>Analista de sistemas</h5>
+                                    <p>(1.107 vagas abertas)</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h3><i class="fas fa-user-md"></i> &nbsp; Saúde</h3>
+                                    <hr>
+                                    <h5>Técnico em enfermagem</h5>
+                                    <p>(1.981 vagas abertas)</p>
+                                    <br>
+                                    <h5>Médico-Outros</h5>
+                                    <p>(786 vagas abertas)</p>
+                                    <br>
+                                    <h5>Auxiliar de enfermagem</h5>
+                                    <p>(649 vagas abertas)</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h3><i class="fas fa-industry"></i> &nbsp; Indústria</h3>
+                                    <hr>
+                                    <h5>Auxiliar de produção</h5>
+                                    <p>(1.336 vagas abertas)</p>
+                                    <br>
+                                    <h5>Operador de máquinas</h5>
+                                    <p>(988 vagas abertas)</p>
+                                    <br>
+                                    <h5>Ajudante geral</h5>
+                                    <p>(613 vagas abertas)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            Mostrar menos
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Vagas em destaque, Empresas que contratam e vagas po estado -->
+    <div class="container vagadestaque">
+        <div class="row">
+            <div class="col-sm-4 desc">
+                <h3><i class="fas fa-suitcase"></i> &nbsp;Vagas em destaque</h3>
+                <hr>
+                <!-- <img src="img/vaga1.jpg" alt=""> -->
+                <small>10/10</small>
+                <h4>Analista de projetos</h4>
+                <h6>A cominar - SC</h6>
+                <hr>
+                <!-- <img src="img/vaga2.jpg" alt=""> -->
+                <small>23/11</small>
+                <h4>Desenvolvedor frontend</h4>
+                <h6>A combinar - SP</h6>
+                <hr>
+                <!-- <img src="img/vaga3.jpg" alt=""> -->
+                <small>30/10</small>
+                <h4>Especialista de maling</h4>
+                <h6>A combinar - PR</h6>
+                <hr>
+                <button type="button" class="btn btn-dark">
+                    Outras vagas
+                </button>
+            </div>
+            <div class="col-sm-4 text-center desc">
+                <h3><i class="fas fa-building"></i> &nbsp;Empresas que contratam</h3>
+                <hr>
+                <img src="img/empresa1.jpg" alt="">
+                <h4>Breithaupt</h4>
+                <hr>
+                <img src="img/empresa2.jpg" alt="">
+                <h4>Atento do Brasil</h4>
+                <hr>
+                <img src="img/empresa3.jpg" alt="">
+                <h4>Seara</h4>
+                <hr>
+                <button type="button" class="btn btn-dark">
+                    Outras empresas
+                </button>
+            </div>
+            <div class="col-sm-4 text-center desc">
+                <h3><i class="fas fa-map-marker-alt"></i> &nbsp;Vagas do estado</h3>
+                <hr>
+                <h4>São Paulo &nbsp; <small>36.580 vagas</small></h4>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Cargo</th>
+                            <th scope="col">Nº</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Comércio Varejista/ Atacadista</td>
+                            <td>1.911 vagas</td>
+                        </tr>
+                        <tr>
+                            <td>Financeiro/ Contabilidade/ Economia</td>
+                            <td>1.869 vagas</td>
+                        </tr>
+                        <tr>
+                            <td>Restaurantes e bares</td>
+                            <td>1.301 vagas</td>
+                        </tr>
+                        <tr>
+                            <td>Serviços Gerais e Domiciliares</td>
+                            <td>1.160</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <button type="button" class="btn btn-dark">
+                    Mais vagas do estado
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Referência: https://www.empregos.com.br/ ;
+ https://www.vagas.com.br/ ;
+  https://www.catho.com.br/lp/acathofunciona/p1?_url=/acathofunciona/p1&utm_source=b2c:af&utm_medium=afilio-afl:niu&utm_campaign=institucional:texto&utm_content=texto:31527 ;
+  https://fontawesome.com/ ; 
+  https://getbootstrap.com/docs/4.1/components/collapse/;
+ Job Listing (template feito por Colib);    -->
+
+
+
+
+
+
+    <footer class="footer text-center">
+        <div class="container">
+            <button type="button" class="btn btn-dark">
+                <i class="fab fa-instagram"></i>
+            </button>
+            <button type="button" class="btn btn-dark">
+                <i class="fab fa-facebook-f"></i>
+            </button>
+            <button type="button" class="btn btn-dark">
+                <i class="fab fa-twitter"></i>
+            </button>
+        </div>
+        Feito com <i class="fas fa-heart"></i> & &nbsp;<i class="fas fa-coffee"></i>.
+        <br>
+        Copyright ©2018 Todos os direitos reservados | Este template foi feito por Keith
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
